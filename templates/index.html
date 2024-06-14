@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diary App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to the Diary App</h1>
+            <nav>
+                <a href="{{ url_for('register') }}" class="btn">Register</a>
+                <a href="{{ url_for('login') }}" class="btn">Login</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <div class="container">
+                <h2>Your personal space to jot down thoughts, ideas, and memories</h2>
+                <p>Sign up today and start writing your diary.</p>
+                <a href="{{ url_for('register') }}" class="btn primary-btn">Get Started</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Diary App. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

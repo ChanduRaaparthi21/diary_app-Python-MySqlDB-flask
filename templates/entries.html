@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Diary Entries</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>My Diary Entries</h1>
+    <form method="post">
+        <textarea name="content" required></textarea>
+        <button type="submit">Add Entry</button>
+    </form>
+    <h2>Entries:</h2>
+    <ul>
+        {% for entry in entries %}
+        <li>
+            <strong>{{ entry[0] }}</strong>: {{ entry[1] }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
